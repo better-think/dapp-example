@@ -3,6 +3,7 @@ import { newContextComponents } from "@drizzle/react-components";
 
 const { AccountData } = newContextComponents;
 
+
 export default ({ drizzle, drizzleState }) => {
     // destructure drizzle and drizzleState from props
     return (

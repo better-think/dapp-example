@@ -20,7 +20,7 @@ class App extends React.Component {
                 <DrizzleContext.Provider drizzle={drizzle}>
                     <DrizzleContext.Consumer>
                         {drizzleContext => {
-                            const { initialized } = drizzleContext;
+                            const { drizzle, drizzleState, initialized } = drizzleContext;
 
                             if (!initialized) {
                                 return "Loading..."
@@ -40,7 +40,9 @@ class App extends React.Component {
                                         </toolbar>
                                     </header>
                                     <h1>Albom</h1>
-
+                                    <Account drizzle={drizzle} drizzleState={drizzleState} />
+                                    <MintCollectible drizzle={drizzle} drizzleState={drizzleState} />
+                                    <Collectibles drizzle={drizzle} drizzleState={drizzleState} />
                                 </div>
                             )
                         }}

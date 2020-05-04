@@ -1,21 +1,29 @@
 .App {
     text-align: center;
     margin: 2rem;
+    font-family: 'Cousine', monospace;
+    /* color: #FCFAF8; */
+}
+
+body {
+    /* background-color: #3500FD; */
 }
 
 h1 {
-    /* font-family: 'Press Start 2P', cursive; */
-    font-family: 'VT323', monospace;
-    font-size: xxx-large;
-    color: #160F29;
+    font-family: 'Major Mono Display', monospace;
+    font-size: 92px;
+    font-weight: 900;
+    /* color: #FCFAF8; */
 }
 
 h2 {
-    color: #160F29;
+    /* font-family: 'Major Mono Display', monospace; */
+    /* font-size: xxx-large; */
+    /* color: #FCFAF8; */
 }
 
 h3 {
-    color: #160F29;
+    color: #FCFAF8;
 }
 
 .card-deck {
@@ -28,6 +36,7 @@ h3 {
 
 ul {
     list-style: none;
+    text-align: left;
     margin: 0;
     padding: 0;
 }
@@ -39,23 +48,20 @@ li {
 
 a {
     text-decoration: none;
-    font-family: 'VT323', monospace;
-    font-size: xx-large;
-    color: #160F29;
+    font-size: x-large;
+    color: #000000;
 }
 
 a:hover,
 a:active {
-    color: #F3DFC1;
+    color: #000000;
 }
 
 .card {
-    border: 1px solid #160F29;
-    background-color: #DDBEA8;
-    box-shadow: 3px 3px 3px #160F29;
+    border: 2px solid #000000;
+    background-color: #FCFAF8;
     text-align: center;
     margin: 0.3em 0.3em 0.3em;
-    border-radius: 9px;
     padding: 12px;
     max-width: 12em;
     font-size: large;
@@ -65,10 +71,10 @@ a:active {
 
 .section {
     text-align: left;
-    max-width: 50%;
+    max-width: 80%;
     margin: 2rem auto auto;
-    border: 2px solid #DDBEA8;
-    border-radius: 12px;
-    box-shadow: 0 4px 6px #DDBEA8;
+    /* border: 2px solid #FCFAF8; */
+    border-radius: 0px;
+    box-shadow: 0 0px 0px #FCFAF8;
     padding: 21px;
 };

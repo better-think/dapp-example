@@ -1,10 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-// import axios from 'axios';
-
-const ipfsClient = require('ipfs-http-client');
-const ipfs = ipfsClient('https://ipfs.infura.io:5001/');
+import ipfs from '../ipfs';
 
 
 class Nifty extends React.Component {
@@ -81,7 +78,6 @@ class Nifty extends React.Component {
                     <Card.Text>
                         {this.state.nifty.details}
                     </Card.Text>
-                    {/* <Button variant="primary">Go somewhere</Button> */}
                 </Card.Body>
             </Card>
         )
