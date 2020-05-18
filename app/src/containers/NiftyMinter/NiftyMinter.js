@@ -37,8 +37,8 @@ class NiftyMinter extends React.Component {
         return (
             <Aux>
                 <h2>new collectible</h2>
-                <div>Artwork Preview</div>
-                <CardDeck>
+                <div className={classes.Border}>Artwork Preview</div>
+                <CardDeck className={classes.Border}>
                     {this.state.nifties.map((nifty, index) =>
                         <MintCard id={index} key={index}
                             imageSrc={nifty.previewUrl}

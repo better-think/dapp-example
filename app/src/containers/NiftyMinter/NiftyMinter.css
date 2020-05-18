@@ -24,6 +24,10 @@ input[type=text]:focus {
     border-bottom: 3px solid #3500FD;
 }
 
+.Border {
+    border: 1px solid #000000;
+}
+
 
 /* input[type=file] {
     display: none;
