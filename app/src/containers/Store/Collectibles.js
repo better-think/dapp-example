@@ -1,7 +1,7 @@
 import React from "react";
 import CardDeck from 'react-bootstrap/CardDeck';
 import { newContextComponents } from "@drizzle/react-components";
-import Nifty from './Collectible';
+import Nifty from '../CollectibleHierarchy/Collectible-old';
 
 const { AccountData, ContractData, ContractForm } = newContextComponents;
 

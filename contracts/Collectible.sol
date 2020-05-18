@@ -1,14 +1,20 @@
 pragma solidity >=0.4.21 <0.7.0;
-// pragma experimental ABIEncoderV2;
+pragma experimental ABIEncoderV2;
 
 // Contracts
 import "@openzeppelin/contracts/token/ERC721/ERC721Full.sol";
 
 
 contract Collectible is ERC721Full {
+    struct FullAsset {
+        string name;
+        string description;
+        string multiHash;
+    }
+
     struct Asset {
         string name;
-        string details;
+        string description;
     }
 
     Asset[] _assets;
@@ -25,15 +31,25 @@ contract Collectible is ERC721Full {
 
     function mint(
         string memory name,
-        string memory details,
+        string memory description,
         string memory multiHash
     )
     public returns (bool)
     {
-        uint256 tokenId = _assets.push(Asset(name, details)) - 1;
+        uint256 tokenId = _assets.push(Asset(name, description)) - 1;
 
         ERC721Enumerable._mint(msg.sender, tokenId);
         ERC721Metadata._setTokenURI(tokenId, multiHash);
+    }
+
+    function multiMint(FullAsset[] memory data) public returns (bool) {
+        for (uint i = 0; i < data.length; i++) {
+            uint256 tokenId = _assets.push(
+                Asset(data[i].name, data[i].description)) - 1;
+
+            ERC721Enumerable._mint(msg.sender, tokenId);
+            ERC721Metadata._setTokenURI(tokenId, data[i].multiHash);
+        }
     }
 
     function collectibleData(uint256 tokenId) public view returns
@@ -43,7 +59,7 @@ contract Collectible is ERC721Full {
     {
         return (
             _assets[tokenId].name,
-            _assets[tokenId].details
+            _assets[tokenId].description
         );
     }
 

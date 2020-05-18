@@ -1,6 +1,6 @@
 import React from "react";
 
-import ipfs from '../ipfs';
+import ipfs from '../../ipfs';
 
 
 class MintCollectible extends React.Component {
@@ -75,10 +75,10 @@ class MintCollectible extends React.Component {
 
         return (
             <div className="section">
-                <h2>Mint New Collectible</h2>
+                <h2>new collectible</h2>
 
                 <form id='mint-form'>
-                    <p>That is going to have the following incisions</p>
+                    {/* <p>That is going to have the following incisions</p> */}
                     <p>
                         <input type='text'
                             placeholder='collectible name...' 
@@ -92,13 +92,13 @@ class MintCollectible extends React.Component {
                         <span style={{ fontWeight: 'bold' }}> Details</span>
                     </p>
                     <p>
-                        <span style={{ fontWeight: 'bold' }}>Unique Artwork Gem </span>
-                        <input className="fileInput" type="file"
+                        {/* <span style={{ fontWeight: 'bold' }}>Unique Artwork Gem </span> */}
+                        <input className="fileInput" type="file" multiple
                             onChange={(event) => this._handleImageChange(event)} />
                     </p>
-                    <div className="imgPreview">
+                    {/* <div className="imgPreview">
                         {imagePreview}
-                    </div>
+                    </div> */}
                     <p />
                     <div align='right'>
                         <button className="submitButton" type="submit"

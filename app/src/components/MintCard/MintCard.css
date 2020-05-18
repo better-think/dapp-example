@@ -1,0 +1,33 @@
+.Card {
+    border: 1px solid #000000;
+    /* background-color: #FCFAF8; */
+    text-align: center;
+    margin: 0.3em 0.3em 0.3em;
+    padding: 12px;
+    max-width: 12em;
+    font-size: large;
+    flex: 1;
+    display: inline-block;
+    /* min-height: 200px; */
+}
+
+.card-img-top {
+    width: 10%;
+    height: 15vw;
+    object-fit: cover;
+}
+
+input[type=text] {
+    font-size: large;
+    width: 100%;
+    padding: 0.3em 0em;
+    margin: 0.2em 0;
+    box-sizing: border-box;
+    border: none;
+    border-bottom: 2px solid #000000;
+    outline: none;
+}
+
+input[type=text]:focus {
+    border-bottom: 3px solid #3500FD;
+}

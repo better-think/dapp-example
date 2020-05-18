@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-import ipfs from '../ipfs';
+import ipfs from '../../ipfs';
 
 
 class Nifty extends React.Component {

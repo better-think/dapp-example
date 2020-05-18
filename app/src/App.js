@@ -1,17 +1,20 @@
 import React from "react";
-
-import { BrowserRouter, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import { DrizzleContext } from "@drizzle/react-plugin";
 import { Drizzle } from "@drizzle/store";
 import drizzleOptions from "./drizzleOptions";
 
-import MintCollectible from "./components/MintCollectible";
-import "./App.css";
-import Collectibles from "./components/Collectibles";
-import Account from "./components/Account";
+
+import Layout from './components/Layout/Layout';
+import Store from './containers/Store/Store';
+import Mixer from './containers/Mixer/Mixer';
+import NiftyMinter from './containers/NiftyMinter/NiftyMinter';
+
+import './App.css';
 
 const drizzle = new Drizzle(drizzleOptions);
+
 
 class App extends React.Component {
     render() {
@@ -20,7 +23,7 @@ class App extends React.Component {
                 <DrizzleContext.Provider drizzle={drizzle}>
                     <DrizzleContext.Consumer>
                         {drizzleContext => {
-                            const { initialized } = drizzleContext;
+                            const { initialized, drizzleState } = drizzleContext;
 
                             if (!initialized) {
                                 return "Loading..."
@@ -28,19 +31,17 @@ class App extends React.Component {
 
                             return (
                                 <div className="App">
-                                    <header>
-                                        <toolbar>
-                                        <nav>
-                                            <ul>
-                                                <li><Link to='/'>Collect</Link></li>
-                                                <li><Link to='/'>Mint</Link></li>
-                                                <li><Link to='/'>Mix</Link></li>
-                                            </ul>
-                                        </nav>
-                                        </toolbar>
-                                    </header>
-                                    <h1>Albom</h1>
-
+                                    <Layout>
+                                        <Switch>
+                                            <Route exact path='/' />
+                                            <Route path='/store' component={Store} />
+                                            <Route path='/mint' render={(props) => 
+                                                <NiftyMinter {...props} 
+                                                    drizzle={drizzle} drizzleState={drizzleState} />}
+                                            />
+                                            <Route path='/mix' component={Mixer} />
+                                        </Switch>
+                                    </Layout>
                                 </div>
                             )
                         }}
