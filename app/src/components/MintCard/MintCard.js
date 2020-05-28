@@ -7,6 +7,8 @@ import classes from './MintCard.css';
 
 
 const mintCard = (props) => {
+    // The following functions are re-defined inside this component,
+    // by doing so React won't do useless re-renderings
     const _onNameChange = event => props.onNameChange(event, props.id);
     const _onDescrChange = event => props.onDescrChange(event, props.id);
     const _onImageChange = event => props.onImageChange(event, props.id);

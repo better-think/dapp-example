@@ -5,6 +5,7 @@ import Aux from '../../hoc/Aux';
 
 import MintCard from '../../components/MintCard/MintCard';
 
+// Interaction with decentralized storage protocol
 import ipfs from '../../ipfs';
 
 import classes from './NiftyMinter.css';
@@ -26,6 +27,10 @@ class NiftyMinter extends React.Component {
             minting: false
         }
 
+        // We will pass these functions to other components, where 'this'
+        // will be undefined, since 'this' is needed within the function
+        // code we bind 'this' now to the functions
+        this._handleDeleteNifty = this._handleDeleteNifty.bind(this);
         this._handleAddNifty = this._handleAddNifty.bind(this);
         this._handleNameChange = this._handleNameChange.bind(this);
         this._handleDescrChange = this._handleDescrChange.bind(this);
@@ -39,6 +44,7 @@ class NiftyMinter extends React.Component {
                 <h2>new collectible</h2>
                 <div className={classes.Border}>Artwork Preview</div>
                 <CardDeck className={classes.Border}>
+                    <button onClick={this._handleDeleteNifty}> - </button>
                     {this.state.nifties.map((nifty, index) =>
                         <MintCard id={index} key={index}
                             imageSrc={nifty.previewUrl}
@@ -56,6 +62,15 @@ class NiftyMinter extends React.Component {
         )
     }
 
+    _handleDeleteNifty() {
+        // we use '...' operator and not 'nifties = this.state.nifties'
+        // because we want a new copy of the state and not reference
+        let nifties = [...this.state.nifties];
+        nifties.pop();
+
+        this.setState({ nifties: nifties });
+    }
+
     _handleAddNifty() {
         this.setState({
             nifties: [
@@ -71,6 +86,7 @@ class NiftyMinter extends React.Component {
         });
     }
 
+    /* Each type we type the name we write it into the state */
     _handleNameChange(event, id) {
         let nifties = [...this.state.nifties];
         nifties[id].name = event.target.value;
@@ -78,6 +94,7 @@ class NiftyMinter extends React.Component {
         this.setState({ nifties: nifties });
     }
 
+    /* Each type we type the description we write it into the state */
     _handleDescrChange(event, id) {
         let nifties = [...this.state.nifties];
         nifties[id].description = event.target.value;
@@ -103,6 +120,7 @@ class NiftyMinter extends React.Component {
         reader.readAsDataURL(nifties[id].file);
     }
 
+    /* When the user is ready to issue the artwork this function is invoked */
     _handleMinting() {
         let nifties = this.state.nifties.map(nifty => {
             return {
@@ -112,6 +130,7 @@ class NiftyMinter extends React.Component {
             }
         });
 
+        // Interaction with Smart Contract
         this.props.drizzle.contracts.Collectible.methods.multiMint
             .cacheSend(
                 nifties,
