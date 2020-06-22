@@ -10,3 +10,4 @@ Using `Node v13.12.0` (with `npm 6.14.4`) through `n`:
  - `npm run start` into the app folder and from a new terminal tab
 
  The dApp will appear at `localhost:3000`.
+

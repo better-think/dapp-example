@@ -3,7 +3,7 @@ import React from 'react';
 class Mixer extends React.Component {
     constructor(props) {
         super(props);
-
+// eslint-disable-next-line
         state: {}
     }
 

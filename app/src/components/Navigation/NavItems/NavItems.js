@@ -3,21 +3,21 @@ import { DrizzleContext } from "@drizzle/react-plugin";
 
 import Aux from '../../../hoc/Aux';
 import NavItem from './NavItem/NavItem';
-import Logo from '../../Logo/Logo';
-
+//import Logo from '../../Logo/Logo';
 import classes from './NavItems.css';
+
 
 const navItems = () => (
     <DrizzleContext.Consumer>
         {drizzleContext => {
+            // eslint-disable-next-line
             const { drizzleState } = drizzleContext;
 
             return (
                 <Aux>
-                    <hr className={classes.NavLine}></hr>
+                    
                     <ul className={classes.NavItems}>
-                        <NavItem exact link='/'>
-                            <Logo />
+                        <NavItem exact link='/'>Home
                         </NavItem>
                         <NavItem link='/store'>Collect</NavItem>
                         <NavItem link='/mint'>Mint</NavItem>
@@ -25,6 +25,7 @@ const navItems = () => (
                         {/* <NavItem link='/account'>
                             <span>{drizzleState.accountBalances[0]}</span>
                         </NavItem> */}
+                        
                     </ul>
                 </Aux>
             )

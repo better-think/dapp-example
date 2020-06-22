@@ -8,7 +8,6 @@
     "@drizzle/react-plugin": "^1.5.1",
     "@drizzle/store": "^1.5.1",
     "@svgr/webpack": "4.3.2",
-    "@toruslabs/torus-embed": "^1.4.3",
     "@typescript-eslint/eslint-plugin": "^2.2.0",
     "@typescript-eslint/parser": "^2.2.0",
     "babel-eslint": "10.0.3",

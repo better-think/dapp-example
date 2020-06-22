@@ -1,14 +1,14 @@
 .NavItems {
+    
     margin-bottom: 7em;
     padding: 0;
     list-style: none;
     display: flex;
     flex-flow: row;
-    align-items: left;
+    align-items: center;
     height: 100%;
+   
+   
+    
 }
 
-.NavLine {
-    border: 0.5px solid #000000;
-    background: #000000;
-}
