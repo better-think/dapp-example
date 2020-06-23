@@ -7,11 +7,9 @@ import drizzleOptions from "./drizzleOptions";
 
 
 import Layout from './components/Layout/Layout';
-import Home from './containers/Home/Home';
 import Store from './containers/Store/Store';
 import Mixer from './containers/Mixer/Mixer';
 import NiftyMinter from './containers/NiftyMinter/NiftyMinter';
-import Artwork from './containers/Artwork/Artwork';
 
 import './App.css';
 
@@ -35,14 +33,13 @@ class App extends React.Component {
                                 <div className="App">
                                     <Layout>
                                         <Switch>
-                                            <Route exact path='/' component={Home} />
+                                            <Route exact path='/' />
                                             <Route path='/store' component={Store} />
                                             <Route path='/mint' render={(props) => 
                                                 <NiftyMinter {...props} 
                                                     drizzle={drizzle} drizzleState={drizzleState} />}
                                             />
                                             <Route path='/mix' component={Mixer} />
-                                            <Route path='/artwork' component={Artwork} />
                                         </Switch>
                                     </Layout>
                                 </div>

@@ -37,8 +37,24 @@ contract Collectible is ERC721Full {
     )
     public returns (uint256)
     {
-        uint256 tokenId = _assets.push(Asset(name, description, 0)) - 1;
-        _assets[tokenId].parentId = tokenId;
+        uint256 tokenId = _assets.push(
+            Asset(name, description, _assets.length)) - 1;
+
+        ERC721Enumerable._mint(msg.sender, tokenId);
+        ERC721Metadata._setTokenURI(tokenId, multiHash);
+
+        return tokenId;
+    }
+
+    function mint(
+        string memory name,
+        string memory description,
+        string memory multiHash,
+        uint256 parentId
+    )
+    public returns (uint256)
+    {
+        uint256 tokenId = _assets.push(Asset(name, description, parentId)) - 1;
 
         ERC721Enumerable._mint(msg.sender, tokenId);
         ERC721Metadata._setTokenURI(tokenId, multiHash);
@@ -53,16 +69,14 @@ contract Collectible is ERC721Full {
             data[0].multiHash);
 
         for (uint i = 1; i < data.length; i++) {
-            uint256 tokenId = _assets.push(
-                Asset(data[i].name, data[i].description, parentId)) - 1;
-
-            ERC721Enumerable._mint(msg.sender, tokenId);
-            ERC721Metadata._setTokenURI(tokenId, data[i].multiHash);
+            this.mint(data[i].name, data[i].description, data[i].multiHash, parentId);
         }
     }
 
-    function collectibleData(uint256 tokenId)
-        public view returns (string memory, string memory)
+    function collectibleData(uint256 tokenId) public view returns
+    (
+        string memory, string memory
+    )
     {
         return (
             _assets[tokenId].name,

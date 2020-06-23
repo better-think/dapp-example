@@ -6,9 +6,12 @@
 } */
 
 .NavItem {
-    display: inline-block;
-    margin-left: 3rem;
-    margin-right: 3rem;
+   margin:0;
+   box-sizing: border-box;
+   display:flex;
+   height:100%;
+   padding:1em;
+   align-items: center;
 }
 
 .NavItem a {
