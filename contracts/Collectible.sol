@@ -47,14 +47,14 @@ contract Collectible is ERC721Full {
     }
 
     function multiMint(FullAsset[] memory data) public returns (uint256) {
-        uint256 memory parentId = this.mint(
+        uint256 parentId = this.mint(
             data[0].name,
             data[0].description,
             data[0].multiHash);
 
         for (uint i = 1; i < data.length; i++) {
             uint256 tokenId = _assets.push(
-                Asset(data[i].name, data[i].description), parentId) - 1;
+                Asset(data[i].name, data[i].description, parentId)) - 1;
 
             ERC721Enumerable._mint(msg.sender, tokenId);
             ERC721Metadata._setTokenURI(tokenId, data[i].multiHash);
