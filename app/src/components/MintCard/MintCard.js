@@ -30,7 +30,7 @@ const mintCard = (props) => {
                 </Card.Text>
                 <input type="file" id="file" required className={classes.path}
                     onChange={_onImageChange} />
-               <label for="file" className={classes.cardLabel}>choose a file</label>
+               <label htmlFor="file" className={classes.cardLabel}>choose a file</label>
             
         </Card>
         </Aux>

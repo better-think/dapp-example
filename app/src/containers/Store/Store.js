@@ -14,175 +14,82 @@ import classes from './Store.css';
 class Store extends React.Component {
     constructor(props) {
         super(props);
-// eslint-disable-next-line
-        state: {}
+        // eslint-disable-next-line
+        state: { }
     }
 
     render() {
-        return(
+        return (
             <div className={classes.container}>
-                <nav className={classes.filter}> 
-                <Form className={classes.searchForm}>
-                     <Form.Group controlId="exampleForm.SelectCustomSizeSm">
-                        <Form.Label>category</Form.Label>
-                        <Form.Control as="select" custom>
-                        <option>photography</option>
-                        <option>cartoon</option>
-                        <option>modern art</option>
-                        <option>nature</option>
-                        <option>other</option>
-                        </Form.Control>
-                    </Form.Group>
+                <nav className={classes.filter}>
+                    <Form className={classes.searchForm}>
+                        <Form.Group controlId="exampleForm.SelectCustomSizeSm">
+                            <Form.Label>category</Form.Label>
+                            <Form.Control as="select" custom>
+                                <option>photography</option>
+                                <option>cartoon</option>
+                                <option>modern art</option>
+                                <option>nature</option>
+                                <option>other</option>
+                            </Form.Control>
+                        </Form.Group>
 
-                    <Form.Group controlId="formBasicRangeCustom">
-                        <Form.Label>prize</Form.Label>
-                        <Form.Control type="range" custom />
-                    </Form.Group>
+                        <Form.Group controlId="formBasicRangeCustom">
+                            <Form.Label>prize</Form.Label>
+                            <Form.Control type="range" custom />
+                        </Form.Group>
 
-                    
-                        <input  type="text" placeholder="Search" className=" mr-sm-2" />
+
+                        <input type="text" placeholder="Search" className=" mr-sm-2" />
                         <Button type="submit">Submit</Button>
-                 </Form>
+                    </Form>
                 </nav>
 
+                <div className={classes.storewrap}>
+                    <CardDeck className={classes.deck}>
+                        <Card className={classes.Card}>
+                            <div className={classes.top}>
+                                <img className={classes.img} src='/' />
+                            </div>
+                            <Card.Title> Lyllipuff </Card.Title>
+                            <Card.Text> This card has supporting text below as a natural lead-in </Card.Text>
+                            <input type="file" id="file" required className={classes.path} />
+                            <label htmlFor="file">take a look</label>
+                        </Card>
 
-            <div className={classes.storewrap}>
-                <CardDeck className={classes.deck}>
-                <Card className={classes.Card}>
-                
-                <div className={classes.top}>
-                <img  className={classes.img} src='/'/> 
-                </div>
-                <Card.Title>
-                    Lyllipuff
-                </Card.Title>
-                <Card.Text>
-                This card has supporting text below as a natural lead-in
-                </Card.Text>
-                <input type="file" id="file" required className={classes.path}
-                     />
-               <label for="file">take a look</label>
-            
-        </Card>
+                        <Card className={classes.Card}>
+                            <div className={classes.top}>
+                                <img className={classes.img} src='/' />
+                            </div>
+                            <Card.Title> Lyllipuff </Card.Title>
+                            <Card.Text> This card has supporting text below as a natural lead-in to additional content.{' '}
+                            </Card.Text>
+                            <input type="file" id="file" required className={classes.path} />
+                            <label htmlFor="file">take a look</label>
+                        </Card>
 
-        <Card className={classes.Card}>
-                
-                <div className={classes.top}>
-                <img  className={classes.img} src='/'/> 
-                </div>
-                <Card.Title>
-                    Lyllipuff
-                </Card.Title>
-                <Card.Text>
-                This card has supporting text below as a natural lead-in to additional
-        content.{' '}
-                </Card.Text>
-                <input type="file" id="file" required className={classes.path}
-                     />
-               <label for="file">take a look</label>
-            
-        </Card>
-        <Card className={classes.Card}>
-                
-                <div className={classes.top}>
-                <img  className={classes.img} src='/'/> 
-                </div>
-                <Card.Title>
-                    Lyllipuff
-                </Card.Title>
-                <Card.Text>
-                This card has supporting text
-                </Card.Text>
-                <input type="file" id="file" required className={classes.path}
-                     />
-               <label for="file">take a look</label>
-            
-        </Card>
-        <Card className={classes.Card}>
-                
-                <div className={classes.top}>
-                <img className={classes.img} src='/'/> 
-                </div>
-                <Card.Title>
-                    Lyllipuff
-                </Card.Title>
-                <Card.Text>
-                This card has supporting text below as a natural lead-in
-                </Card.Text>
-                <input type="file" id="file" required className={classes.path}
-                     />
-               <label for="file">take a look</label>
-            
-        </Card>
-        <Card className={classes.Card}>
-                
-                <div className={classes.top}>
-                <img  className={classes.img} src='/'/> 
-                </div>
-                <Card.Title>
-                    Lyllipuff
-                </Card.Title>
-                <Card.Text>
-                This card has supporting text below as a natural lead-in
-                </Card.Text>
-                <input type="file" id="file" required className={classes.path}
-                     />
-               <label for="file">take a look</label>
-            
-        </Card>
-        <Card className={classes.Card}>
-                
-                <div className={classes.top}>
-                <img  className={classes.img} src='/'/> 
-                </div>
-                <Card.Title>
-                    Lyllipuff
-                </Card.Title>
-                <Card.Text>
-                This card has supporting text below as a natural lead-in
-                </Card.Text>
-                <input type="file" id="file" required className={classes.path}
-                     />
-               <label for="file">take a look</label>
-            
-        </Card>
-        <Card className={classes.Card}>
-                
-                <div className={classes.top}>
-                <img  className={classes.img} src='/'/> 
-                </div>
-                <Card.Title>
-                    Lyllipuff
-                </Card.Title>
-                <Card.Text>
-                This card has supporting text below as a natural lead-in
-                </Card.Text>
-                <input type="file" id="file" required className={classes.path}
-                     />
-               <label for="file">take a look</label>
-            
-        </Card>
-        <Card className={classes.Card}>
-                
-                <div className={classes.top}>
-                <img  className={classes.img} src='/'/> 
-                </div>
-                <Card.Title>
-                    Lyllipuff
-                </Card.Title>
-                <Card.Text>
-                This card has supporting text below as a natural lead-in
-                </Card.Text>
-                <input type="file" id="file" required className={classes.path}
-                     />
-               <label for="file">take a look</label>
-            
-        </Card>
-</CardDeck>
+                        <Card className={classes.Card}>
+                            <div className={classes.top}>
+                                <img className={classes.img} src='/' />
+                            </div>
+                            <Card.Title> Lyllipuff </Card.Title>
+                            <Card.Text> This card has supporting text </Card.Text>
+                            <input type="file" id="file" required className={classes.path} />
+                            <label htmlFor="file">take a look</label>
+                        </Card>
 
-
-                
-            </div>
+                        <Card className={classes.Card}>
+                            <div className={classes.top}>
+                                <img className={classes.img} src='/' />
+                            </div>
+                            <Card.Title> Lyllipuff </Card.Title>
+                            <Card.Text> This card has supporting text below as a natural lead-in </Card.Text>
+                            <input type="file" id="file" required className={classes.path} />
+                            <label htmlFor="file">take a look</label>
+                        </Card>
+                       
+                    </CardDeck>
+                </div>
             </div>
         );
     }
