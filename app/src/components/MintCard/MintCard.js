@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-import Aux from '../../hoc/Aux';
+import Aux from '../../hoc/Auxiliary';
 
 import classes from './MintCard.css';
 
