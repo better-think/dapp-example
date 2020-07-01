@@ -1,0 +1,80 @@
+/* .App {
+    text-align: center;
+    margin: 2rem;
+    font-family: 'Cousine', monospace;
+    color: #FCFAF8;
+}
+
+body {
+    background-color: #3500FD;
+}
+
+h1 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: 92px;
+    font-weight: 900;
+    color: #FCFAF8;
+}
+
+h2 {
+    font-family: 'Major Mono Display', monospace;
+    font-size: xxx-large;
+    color: #FCFAF8;
+}
+
+h3 {
+    color: #FCFAF8;
+} */
+
+/* .card-deck {
+    display: 'flex';
+    width: 100%;
+    flex-direction: row;
+    justify-content: center;
+    flexDirection: 'row';
+}
+
+ul {
+    list-style: none;
+    text-align: left;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    display: inline-block;
+    margin: 2rem;
+}
+
+a {
+    text-decoration: none;
+    font-size: x-large;
+    color: #000000;
+}
+
+a:hover,
+a:active {
+    color: #000000;
+} */
+
+.card {
+    border: 2px solid #000000;
+    background-color: #FCFAF8;
+    text-align: center;
+    margin: 0.3em 0.3em 0.3em;
+    padding: 12px;
+    max-width: 12em;
+    font-size: large;
+    flex: 1;
+    display: inline-block;
+}
+
+/* .section {
+    text-align: left;
+    max-width: 80%;
+    margin: 2rem auto auto;
+    border: 2px solid #FCFAF8;
+    border-radius: 0px;
+    box-shadow: 0 0px 0px #FCFAF8;
+    padding: 21px;
+}; */
