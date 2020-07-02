@@ -1,6 +1,6 @@
 import React from 'react';
 
-import Aux from '../../hoc/Aux';
+import Auxiliary from '../../hoc/Auxiliary';
 //import NavItems from '../Navigation/NavItems/NavItems';
 
 import classes from './Layout.css';
@@ -8,13 +8,13 @@ import Toolbar from '../Navigation/Toolbar/Toolbar';
 import RegistrationModal from '../Registration/RegistrationModal';
 
 const layout = (props) => (
-    <Aux>
+    <Auxiliary>
         <Toolbar />
         <main className={classes.Content}>
             {props.children}
             <RegistrationModal/>
         </main>
-    </Aux>
+    </Auxiliary>
 );
 
 export default layout;

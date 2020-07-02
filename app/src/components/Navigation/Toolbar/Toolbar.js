@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import classes from './Toolbar.css';
 import NavItems from '../NavItems/NavItems';
 import Button from 'react-bootstrap/Button';
-import Aux from '../../../hoc/Aux';
+import Auxiliary from '../../../hoc/Auxiliary';
 import Modal from 'react-bootstrap/Modal';
 import RegistrationModal from '../../Registration/RegistrationModal';
 import Form from 'react-bootstrap/Form';
@@ -17,7 +17,7 @@ const Toolbar = (props) => {
 
     return(
     
-        <Aux>
+        <Auxiliary>
         <header className={classes.Toolbar}>
           <div>LOGO</div>
           <nav>
@@ -79,7 +79,7 @@ const Toolbar = (props) => {
            
           </Modal.Footer>
         </Modal>
-          </Aux>
+          </Auxiliary>
 );
     }
     

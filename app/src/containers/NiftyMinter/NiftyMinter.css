@@ -10,7 +10,6 @@ overflow-y: none;
 
 }
 .Left{
-    filter: drop-shadow(4px 6px 3px rgba(50, 50, 0, 0.5));
     width:40%;
     text-align:center;
     overflow:auto;
@@ -43,7 +42,7 @@ input[type=text] {
     margin: 0.2em 0;
     box-sizing: border-box;
     border: none;
-    border-bottom: 2px solid #000000;
+    border-bottom: .5px solid lightgrey;
     outline: none;
 }
 

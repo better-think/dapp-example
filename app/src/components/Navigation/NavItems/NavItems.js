@@ -1,7 +1,7 @@
 import React from 'react';
 import { DrizzleContext } from "@drizzle/react-plugin";
 
-import Aux from '../../../hoc/Aux';
+import Auxiliary from '../../../hoc/Auxiliary';
 import NavItem from './NavItem/NavItem';
 //import Logo from '../../Logo/Logo';
 import classes from './NavItems.css';
@@ -14,7 +14,7 @@ const navItems = () => (
             const { drizzleState } = drizzleContext;
 
             return (
-                <Aux>
+                <Auxiliary>
                     
                     <ul className={classes.NavItems}>
                         <NavItem exact link='/'>Home
@@ -27,7 +27,7 @@ const navItems = () => (
                         </NavItem> */}
                         
                     </ul>
-                </Aux>
+                </Auxiliary>
             )
         }}
     </DrizzleContext.Consumer>

@@ -2,7 +2,7 @@ import React,{useState} from 'react';
 import Modal from 'react-bootstrap/Modal';
 import Button from 'react-bootstrap/Modal';
 
-import Aux from '../../hoc/Aux';
+import Auxiliary from '../../hoc/Auxiliary';
 
 import classes from './RegistrationModal.css';
 
@@ -13,7 +13,7 @@ const RegistrationModal =()=> {
    const handleShow =()=> setShow(true);
 
         return (
-            <Aux>
+            <Auxiliary>
       
       <Button variant="primary" onClick={handleShow}>
        Register | wallet
@@ -33,7 +33,7 @@ const RegistrationModal =()=> {
           </Button>
         </Modal.Footer>
       </Modal>
-        </Aux>
+        </Auxiliary>
         );
         }
 

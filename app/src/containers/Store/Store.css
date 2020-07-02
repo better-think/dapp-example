@@ -5,63 +5,85 @@
 }
 .filter{
     width:25%;
-   
-    background: rgba(255,255,255,0.1) !important;
-    box-shadow:2px 2px 7px  #888888;
-    margin-top:56px;
-    z-index:110;
-    overflow:auto;
+    clip-path: polygon(0% 0%, 82% 0, 100% 10%, 100% 100%, 20% 100%, 0 100%);    /*border:.5px solid black;*/
     
-  
+    background: rgba(71, 71, 71, 0.3) !important;
+    margin-top:56px;
+    overflow:auto; 
 }
+
 .storewrap{
 width:100%; 
 margin-top:3em;
-display:flex;
-flex-wrap:wrap;
-justify-content:right;
+
 z-index:90;
 overflow:auto;
 overflow-x: hidden;
-filter: drop-shadow(6px 6px 3px rgba(50, 50, 0, 0.5));
 
 
 }
+h2{
+    text-align:left;
+}
+h2::after{
+    display:block;
+    content:'';
+    margin-top:2em;
+    border-top:1px solid lightgrey;
+}
+
+
+/*scrollbar style----------------------------*/
+::-webkit-scrollbar{
+    width:17px;
+    height:10px;
+}
+::-webkit-scrollbar-track{
+    background-color:#ffff;
+}
+::-webkit-scrollbar-thumb{
+    background-color:lightgreen;
+    border-radius:15px;
+}
+
+
 .deck{
-    justify-content: center;
     
+    justify-content:  space-between;
+    display:flex;
+    flex-wrap: nowrap;
+    flex-direction:row;
+    overflow-x:scroll ;
+    margin-left:2em;
+    padding:1em;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);    
+
     
     
 }
 .Card {
     border-radius:9px;
-    /* background-color: #FCFAF8; */
     text-align: center;
-
     margin: 2em ;
-    padding-top: 3em;
+    padding: 4em 1em 4em 1em ;
     max-width: 10em;
     min-width:15em;
     font-size: large;
     flex: 1;
     display: inline-block;
-    /*box-shadow:0px 3px 17px -5px #888888;*/
-    clip-path: polygon(0% 0%, 31% 0, 39% 7%, 100% 7%, 100% 100%, 69% 100%, 61% 93%, 0 93%);
-
-   
+    box-shadow:0px 3px 17px -5px #888888;
 }
+
 .img{
     object-fit: contain;
     margin-bottom:10px;
     width:150px;
-    height:150px;
-    
-
+    height:150px;   
 }
 
 /* sidenav style -----------------------------*/
 .searchForm{
-    padding:1em;
+    padding:3em;
 }
  
 nav input[type=text]{
@@ -69,7 +91,15 @@ nav input[type=text]{
     padding:.5em;
     border-radius:7px;    
 }
-nav label{
-    box-shadow:none;
-   
+label{
+margin:1em 0 1em 0;    
+background-color:#ffff;
+padding:1em;
+border-radius:20px;
+}
+.btn{
+    background-color:black;
+    border:none;
+    margin-top:1em;
+
 }

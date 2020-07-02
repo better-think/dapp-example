@@ -1,7 +1,7 @@
 import React from 'react';
 import CardDeck from 'react-bootstrap/CardDeck';
 
-import Aux from '../../hoc/Aux';
+import Auxiliary from '../../hoc/Auxiliary';
 
 import MintCard from '../../components/MintCard/MintCard';
 
@@ -37,17 +37,24 @@ class NiftyMinter extends React.Component {
 
     render() {
         return (
-            <Aux>
+            <Auxiliary>
                   
                 <div className={classes.Wrap}>
                  
                     <div className={classes.navWrap}>
-                    <div className={classes.Sidebar}> sidebar</div>
+                    <div className={classes.Sidebar}>
+                    <div className={classes.BtnLayout}>
+                        <button className={classes.AddBtn} onClick={this._handleAddNifty}> + </button>
+                    </div>
+                    <div className={classes.BtnLayout}>
+                        
+                    </div>
+                    </div>
                     
 
                     </div>
                     <div className={classes.Left} >
-                       <h2 className={classes.title}>New collectible</h2>                                
+                       <h3 className={classes.title}>New collectible</h3>                                
                         <CardDeck className={classes.MinterItems}>
                             {this.state.nifties.map((nifty, index) =>
                                 <MintCard id={index} key={index}
@@ -62,13 +69,13 @@ class NiftyMinter extends React.Component {
                 
                     </div>
                     <div className={classes.Right}>
-                        <h2 className={classes.title}>Artwork Preview</h2>
+                        <h3 className={classes.title}>Artwork Preview</h3>
                         <button  className={classes.MintBtn}onClick={this._handleMinting}>Mint</button>
                     </div>
                 
               
                 </div>
-            </Aux>
+            </Auxiliary>
         )
     }
 

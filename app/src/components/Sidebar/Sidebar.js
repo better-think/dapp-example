@@ -1,14 +1,14 @@
 import React from 'react';
-import Aux from '../../hoc/Aux';
+import Auxiliary from '../../hoc/Auxiliary';
 import classes from './Sidebar.css';
 
 const Sidebar = (props)=>{
     return(
-<Aux>
+<Auxiliary>
     <nav className={classes.filter}>
         nav 
     </nav>
-</Aux>
+</Auxiliary>
     )
 };
 export default Sidebar;

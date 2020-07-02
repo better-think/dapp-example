@@ -1,7 +1,7 @@
 import React from 'react';
 import Card from 'react-bootstrap/Card';
 
-import Aux from '../../hoc/Auxiliary';
+import Auxiliary from '../../hoc/Auxiliary';
 
 import classes from './MintCard.css';
 
@@ -12,7 +12,7 @@ const mintCard = (props) => {
     const _onImageChange = event => props.onImageChange(event, props.id);
 
     return (
-        <Aux>
+        <Auxiliary>
              <Card className={classes.Card}>
                 
                 <div className={classes.top}>
@@ -33,7 +33,7 @@ const mintCard = (props) => {
                <label htmlFor="file" className={classes.cardLabel}>choose a file</label>
             
         </Card>
-        </Aux>
+        </Auxiliary>
     )
 };
 

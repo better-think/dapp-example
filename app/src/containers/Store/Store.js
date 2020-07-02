@@ -6,7 +6,7 @@ import Card from 'react-bootstrap/Card';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import PageItem from 'react-bootstrap/PageItem'
-
+import TokenCard from '../../components/TokenCard/TokenCard';
 
 import classes from './Store.css';
 
@@ -21,10 +21,12 @@ class Store extends React.Component {
     render() {
         return (
             <div className={classes.container}>
+                
+                    
                 <nav className={classes.filter}>
-                    <Form className={classes.searchForm}>
+                <Form className={classes.searchForm}>
                         <Form.Group controlId="exampleForm.SelectCustomSizeSm">
-                            <Form.Label>category</Form.Label>
+                            <Form.Label >Category</Form.Label>
                             <Form.Control as="select" custom>
                                 <option>photography</option>
                                 <option>cartoon</option>
@@ -41,53 +43,35 @@ class Store extends React.Component {
 
 
                         <input type="text" placeholder="Search" className=" mr-sm-2" />
-                        <Button type="submit">Submit</Button>
+                        <Button type="submit" className={classes.btn}>Submit</Button>
                     </Form>
+
                 </nav>
+              
 
                 <div className={classes.storewrap}>
+
+                    <h2> category #1</h2>
                     <CardDeck className={classes.deck}>
-                        <Card className={classes.Card}>
-                            <div className={classes.top}>
-                                <img className={classes.img} src='/' />
-                            </div>
-                            <Card.Title> Lyllipuff </Card.Title>
-                            <Card.Text> This card has supporting text below as a natural lead-in </Card.Text>
-                            <input type="file" id="file" required className={classes.path} />
-                            <label htmlFor="file">take a look</label>
-                        </Card>
+                    <TokenCard ></TokenCard>  
+                    <TokenCard ></TokenCard>  
+                    <TokenCard ></TokenCard>  
+                    <TokenCard ></TokenCard>  
+                    <TokenCard ></TokenCard>  
+                    <TokenCard ></TokenCard> 
+                     
+                    </CardDeck>
+                    
 
-                        <Card className={classes.Card}>
-                            <div className={classes.top}>
-                                <img className={classes.img} src='/' />
-                            </div>
-                            <Card.Title> Lyllipuff </Card.Title>
-                            <Card.Text> This card has supporting text below as a natural lead-in to additional content.{' '}
-                            </Card.Text>
-                            <input type="file" id="file" required className={classes.path} />
-                            <label htmlFor="file">take a look</label>
-                        </Card>
-
-                        <Card className={classes.Card}>
-                            <div className={classes.top}>
-                                <img className={classes.img} src='/' />
-                            </div>
-                            <Card.Title> Lyllipuff </Card.Title>
-                            <Card.Text> This card has supporting text </Card.Text>
-                            <input type="file" id="file" required className={classes.path} />
-                            <label htmlFor="file">take a look</label>
-                        </Card>
-
-                        <Card className={classes.Card}>
-                            <div className={classes.top}>
-                                <img className={classes.img} src='/' />
-                            </div>
-                            <Card.Title> Lyllipuff </Card.Title>
-                            <Card.Text> This card has supporting text below as a natural lead-in </Card.Text>
-                            <input type="file" id="file" required className={classes.path} />
-                            <label htmlFor="file">take a look</label>
-                        </Card>
-                       
+                    <h2> category #2</h2>
+                    <CardDeck className={classes.deck}>
+                    <TokenCard ></TokenCard>  
+                    <TokenCard ></TokenCard>  
+                    <TokenCard ></TokenCard>  
+                    <TokenCard ></TokenCard>  
+                    <TokenCard ></TokenCard>  
+                    <TokenCard ></TokenCard> 
+                     
                     </CardDeck>
                 </div>
             </div>

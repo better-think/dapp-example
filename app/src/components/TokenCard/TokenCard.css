@@ -1,0 +1,25 @@
+.Token {
+    border-radius:6px;
+    background-color: #FCFAF8; 
+    text-align: center;
+    margin: 2em ;
+    max-width:15em;
+    display: inline-block;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12), 0 3px 1px -2px rgba(0,0,0,.2);    
+}
+.top{
+    height:200px;
+    background:linear-gradient(322deg, rgba(102,102,102,1) 0%, rgba(110,110,113,1) 35%, rgba(241,241,241,1) 100%);
+}
+.Img{
+    object-fit: contain;
+    margin-top:1.5vw;
+    
+  
+    border:solid 1px black;
+    
+
+}
+.body{
+ border-top:.2px solid lightgrey;
+}
