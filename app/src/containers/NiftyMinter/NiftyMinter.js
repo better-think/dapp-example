@@ -135,6 +135,8 @@ class NiftyMinter extends React.Component {
             }
         });
 
+        console.log(this.props.drizzleState.accounts[0])
+
         this.props.drizzle.contracts.Collectible.methods.multiMint
             .cacheSend(
                 nifties,
