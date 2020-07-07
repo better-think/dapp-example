@@ -21,7 +21,7 @@ const navItems = () => (
                         </NavItem>
                         <NavItem link='/store'>Collect</NavItem>
                         <NavItem link='/mint'>Mint</NavItem>
-                        <NavItem link='/mix'>Mix</NavItem>
+                        {/* <NavItem link='/mix'>Mix</NavItem> */}
                         {/* <NavItem link='/account'>
                             <span>{drizzleState.accountBalances[0]}</span>
                         </NavItem> */}

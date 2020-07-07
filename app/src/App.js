@@ -41,7 +41,7 @@ class App extends React.Component {
                                                 <NiftyMinter {...props} 
                                                     drizzle={drizzle} drizzleState={drizzleState} />}
                                             />
-                                            <Route path='/mix' component={Mixer} />
+                                            {/* <Route path='/mix' component={Mixer} /> */}
                                         </Switch>
                                     </Layout>
                                 </div>
