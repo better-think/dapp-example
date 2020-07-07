@@ -24,6 +24,8 @@
     "@openzeppelin/contracts": "^2.5.0",
     "axios": "^0.19.2",
     "bootstrap": "^4.5.0",
-    "react-bootstrap": "^1.0.1"
+    "dotenv": "^8.2.0",
+    "react-bootstrap": "^1.0.1",
+    "truffle-hdwallet-provider": "^1.0.17"
   }
 }
