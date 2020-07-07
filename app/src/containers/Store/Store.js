@@ -7,7 +7,7 @@ import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import PageItem from 'react-bootstrap/PageItem'
 import TokenCard from '../../components/TokenCard/TokenCard';
-
+import Pagination from 'react-bootstrap/Pagination';
 import classes from './Store.css';
 
 
@@ -17,6 +17,7 @@ class Store extends React.Component {
         // eslint-disable-next-line
         state: { }
     }
+
 
     render() {
         return (
@@ -51,7 +52,7 @@ class Store extends React.Component {
 
                 <div className={classes.storewrap}>
 
-                    <h2> category #1</h2>
+                    
                     <CardDeck className={classes.deck}>
                     <TokenCard ></TokenCard>  
                     <TokenCard ></TokenCard>  
@@ -59,20 +60,22 @@ class Store extends React.Component {
                     <TokenCard ></TokenCard>  
                     <TokenCard ></TokenCard>  
                     <TokenCard ></TokenCard> 
-                     
+                    <TokenCard ></TokenCard>  
+                    <TokenCard ></TokenCard>  
+                    <TokenCard ></TokenCard>  
+                    <TokenCard ></TokenCard>  
+                    <TokenCard ></TokenCard>  
+                    <TokenCard ></TokenCard> 
                     </CardDeck>
                     
 
-                    <h2> category #2</h2>
-                    <CardDeck className={classes.deck}>
-                    <TokenCard ></TokenCard>  
-                    <TokenCard ></TokenCard>  
-                    <TokenCard ></TokenCard>  
-                    <TokenCard ></TokenCard>  
-                    <TokenCard ></TokenCard>  
-                    <TokenCard ></TokenCard> 
-                     
-                    </CardDeck>
+                   
+                    
+                    
+                  <div className={classes.pagination}>
+              <Button >View more</Button>
+                  </div>
+                  
                 </div>
             </div>
         );

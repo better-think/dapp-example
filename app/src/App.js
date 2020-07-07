@@ -12,6 +12,7 @@ import Store from './containers/Store/Store';
 import Mixer from './containers/Mixer/Mixer';
 import NiftyMinter from './containers/NiftyMinter/NiftyMinter';
 
+
 import './App.css';
 
 const drizzle = new Drizzle(drizzleOptions);

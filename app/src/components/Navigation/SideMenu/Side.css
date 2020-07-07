@@ -1,0 +1,33 @@
+.side{
+    width:50%;
+    height:100vh;
+    background-color:transparent;
+    position:fixed;
+    top:0;
+    left:0;
+    box-shadow:0px 1.5px 17px -5px #888888;
+    z-index:103;
+    display:none;
+
+}
+.close{
+    float:right;
+    margin:1em;
+    cursor:pointer;
+}
+@media (max-width:500px){
+    .side{
+        width:50%;
+        height:100vh;
+        background-color:rgba(255, 255, 255, .7);
+        position:fixed;
+        top:0;
+        left:0;
+        box-shadow:0px 1.5px 17px -5px #888888;
+        z-index:103;
+        display:block;
+    
+    }
+
+
+}

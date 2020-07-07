@@ -7,6 +7,7 @@ import Modal from 'react-bootstrap/Modal';
 import RegistrationModal from '../../Registration/RegistrationModal';
 import Form from 'react-bootstrap/Form';
 import FormControl from 'react-bootstrap/FormControl';
+import Logo from './Logo/Logo';
 
 
 const Toolbar = (props) => {
@@ -15,18 +16,22 @@ const Toolbar = (props) => {
     const handleClose = () => setShow(false);
     const handleShow =()=> setShow(true);
 
+
+ 
     return(
     
         <Auxiliary>
         <header className={classes.Toolbar}>
-          <div>LOGO</div>
-          <nav>
-              <NavItems/>
-             
-             
-          </nav>
          
-          <Button variant="primary" onClick={handleShow}>
+          <Logo click={props.SideOpen}/>
+          <NavItems className={classes.items} />
+          
+         
+         
+             
+ 
+         
+          <Button  onClick={handleShow}>
          Register | wallet
         </Button>
           

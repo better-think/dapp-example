@@ -23,3 +23,8 @@
 .body{
  border-top:.2px solid lightgrey;
 }
+@media (max-width:480px){
+    .Token{
+        max-width:12em;
+    }
+}

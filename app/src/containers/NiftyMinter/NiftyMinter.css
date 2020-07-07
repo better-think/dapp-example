@@ -94,6 +94,27 @@ input[type=text]:focus {
 .AddBtn{
     margin:2em;
 }
+@media (max-width:480px){
+    .Wrap{
+        
+        flex-flow:column;
+    }
+    .Left{
+        width:100vw;
+    }
+    .Right{
+       width:100vw;
+    }
+    .navWrap{
+        width:100vw;
+        height:50px;
+    }
+    .Sidebar{
+        width:100vw;
+        height:100px;
+    }
+
+}
 /*  <div className={classes.BtnLayout}>
                         <button className={classes.AddBtn} onClick={this._handleAddNifty}> + </button>
                     </div>

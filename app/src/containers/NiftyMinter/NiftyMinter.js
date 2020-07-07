@@ -1,10 +1,10 @@
-import React from 'react';
+import React,{useState} from 'react';
 import CardDeck from 'react-bootstrap/CardDeck';
 
 import Auxiliary from '../../hoc/Auxiliary';
 
 import MintCard from '../../components/MintCard/MintCard';
-
+import Modal from 'react-bootstrap/Modal';
 import ipfs from '../../ipfs';
 
 import classes from './NiftyMinter.css';
@@ -25,7 +25,11 @@ class NiftyMinter extends React.Component {
                 previewUrl: null,
                 multiHash: null
             }],
-            minting: false
+            minting: false,
+            show:false
+           
+
+
         }
 
         this._handleAddNifty = this._handleAddNifty.bind(this);
@@ -33,7 +37,9 @@ class NiftyMinter extends React.Component {
         this._handleDescrChange = this._handleDescrChange.bind(this);
         this._handleImageChange = this._handleImageChange.bind(this);
         this._handleMinting = this._handleMinting.bind(this);
-    }
+        this._handleClose = this._handleClose.bind(this);
+            }
+   
 
     render() {
         return (
@@ -71,6 +77,29 @@ class NiftyMinter extends React.Component {
                     <div className={classes.Right}>
                         <h3 className={classes.title}>Artwork Preview</h3>
                         <button  className={classes.MintBtn}onClick={this._handleMinting}>Mint</button>
+                                
+                        <Modal show={this.state.show} onHide={this._handleClose}                        
+                        size="lg"
+                        aria-labelledby="contained-modal-title-vcenter"
+                        centered
+                        >
+                            <Modal.Header closeButton>
+                                <Modal.Title id="contained-modal-title-vcenter">
+                                Congratulation! your pockemon is now ready 
+                                </Modal.Title>
+                            </Modal.Header>
+                            <Modal.Body>
+                                <img></img>
+                                <p>
+                                Cras mattis consectetur purus sit amet fermentum. Cras justo odio,
+                                dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac
+                                consectetur ac, vestibulum at eros.
+                                </p>
+                            </Modal.Body>
+                            <Modal.Footer>
+                            
+                            </Modal.Footer>
+                        </Modal>
                     </div>
                 
               
@@ -78,6 +107,8 @@ class NiftyMinter extends React.Component {
             </Auxiliary>
         )
     }
+
+  
 
     _handleAddNifty() {
         this.setState({
@@ -133,6 +164,7 @@ class NiftyMinter extends React.Component {
                 description: nifty.description,
                 multiHash: nifty.multiHash
             }
+           
         });
 
         this.props.drizzle.contracts.Collectible.methods.multiMint
@@ -144,6 +176,11 @@ class NiftyMinter extends React.Component {
                     gas: 4000000
                 }
             );
+            this.setState({show:true});
+           
+    }
+    _handleClose(){
+        this.setState({show:false});
     }
 }
 

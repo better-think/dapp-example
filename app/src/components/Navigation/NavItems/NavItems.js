@@ -16,7 +16,7 @@ const navItems = () => (
             return (
                 <Auxiliary>
                     
-                    <ul className={classes.NavItems}>
+                    <ul className={classes.NavItems} >
                         <NavItem exact link='/'>Home
                         </NavItem>
                         <NavItem link='/store'>Collect</NavItem>

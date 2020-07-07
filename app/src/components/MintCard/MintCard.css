@@ -49,6 +49,11 @@ input[type="file"]{
   
 
 }
+@media (max-width:480px){
+    .Card{
+        min-width: 14em;
+    }
+}
 /*.card-img-top {
     width: 10%;
     height: 15vw;

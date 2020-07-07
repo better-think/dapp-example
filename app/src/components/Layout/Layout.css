@@ -3,6 +3,13 @@
     
 
 }
+@media (max-width: 500px){
+    .Content{
+    width:100vw;
+    margin:0 auto;
+    
+    }
+}
 /* <li className={classes.NavItem}>
         <NavLink 
             to={props.link}
